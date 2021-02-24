@@ -3,3 +3,6 @@
 ################################################################################
 
 /ProjectMultiThreading/bin/Debug
+/ProjectMultiThreading/obj/Debug
+/UnitTestMultiThreading/bin/Debug
+/UnitTestMultiThreading/obj/Debug

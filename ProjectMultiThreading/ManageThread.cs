@@ -31,21 +31,42 @@ namespace ProjectMultiThreading
         }
         public void AddItems(int item1,int item2)
         {
-            ItemList.Add(item1);
-            ItemList.Add(item2);
+            try
+            {
+                ItemList.Add(item1);
+                ItemList.Add(item2);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("An error Occured:", ex.Message);
+            }
             Thread.Sleep(new TimeSpan(0, 0, m_Thread1SleepTime));
         }          
 
 
         public void AddNewItems(int item1,int item2)
         {
-            ItemList.Add(item1);
-            ItemList.Add(item2);
+            try
+            {
+                ItemList.Add(item1);
+                ItemList.Add(item2);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("An error Occured:",ex.Message);
+            }
             Thread.Sleep(new TimeSpan(0, 0, m_Thread2SleepTime));
         }
         public void CountItems()
         {
-            Console.WriteLine("Total Items={0}", ItemList.Count);
+            try
+            {
+                Console.WriteLine("Total Items={0}", ItemList.Count);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("An error Occured:", ex.Message);
+            }
             Thread.Sleep(new TimeSpan(0, 0, m_Thread3SleepTime));
         }
     }
